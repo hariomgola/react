@@ -1,0 +1,8 @@
+.main-notes-section {
+  float: left;
+  padding: 0px 2px;
+  border: none;
+  height: 90vh;
+  width: 90%;
+  border-left: none;
+}

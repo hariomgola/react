@@ -1,0 +1,12 @@
+.main-pre-notes {
+  height: 90vh;
+  width: auto;
+  overflow-x: auto;
+  overflow-y: auto;
+  /* border-left: 3px solid #4caf50; */
+  background-color: #fafafa;
+  text-align: inherit;
+}
+.main-pre-notes pre {
+  color: black;
+}

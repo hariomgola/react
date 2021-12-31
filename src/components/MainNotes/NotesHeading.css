@@ -1,0 +1,11 @@
+.heading {
+  font-family: "Faster One", cursive;
+  text-align: center;
+  height: 5vh;
+  font-size: 3vh;
+  background-color: #f1f1f1;
+  border-left: 0.3vh solid #4caf50;
+  border-right: 0.3vh solid #4caf50;
+  border-top: 0.3vh solid #4caf50;
+  border-bottom: 0.3vh solid #4caf50;
+}

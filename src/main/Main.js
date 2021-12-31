@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Preloading from "../components/Preloading/Preloading";
 import Loading from "../components/Loading/Loading";
 import MainNavigation from "./MainNavigation";
+import Notes from "../components/MainNotes/Notes";
+
 // functionality start from here
 const Main = () => {
   const [state, setState] = useState("preloading");
@@ -25,7 +27,12 @@ const Main = () => {
     <>
       {state === "preloading" && <Preloading />}
       {state === "loading" && <Loading />}
-      {state === "main" && <MainNavigation />}
+      {state === "main" && (
+        <>
+          <MainNavigation />
+          <Notes />
+        </>
+      )}
     </>
   );
 };
