@@ -9,8 +9,7 @@ const Navigation = (props) => {
   const [Device, setDevice] = useState(props.device);
   // code for checking wheater application is using on mobile of not
   let checkwidth = () => {
-    let width = window.innerWidth;
-    if (width <= 700) {
+    if (window.innerWidth <= 700) {
       setDevice("mobile");
     } else {
       setDevice("window");
@@ -20,9 +19,15 @@ const Navigation = (props) => {
   window.addEventListener("resize", checkwidth); // Adding event handler on window resize
   return (
     <>
-      {Device === "mobile" && <MobileNavigation />}
-      {Device === "window" && <NavigationBar />}
+      {Device === "mobile" && <MobileNavigation setdata={props.setdata} />}
+      {Device === "window" && <NavigationBar setdata={props.setdata} />}
     </>
   );
 };
+
+// export
 export default Navigation;
+
+/**
+ * props.setdata // useState function
+ */

@@ -4,10 +4,10 @@ import React from "react";
 import Navigation from "../components/Navigation/Navigation";
 
 // functionality start from here
-const mainNavigation = () => {
+const mainNavigation = (props) => {
   let _deviceType = window.innerWidth <= 700 ? "mobile" : "window";
-  console.log(`Using device ${_deviceType}`);
-  return <Navigation device={_deviceType} />;
+  console.warn(`Accessing notes on ${_deviceType}`);
+  return <Navigation device={_deviceType} setdata={props.setdata} />;
 };
 
 // exporting the component

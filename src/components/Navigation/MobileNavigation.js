@@ -19,7 +19,7 @@ const MobileNavigation = (props) => {
         <button className="menu-button-close" onClick={closeMenu}>
           <span>Home</span>
         </button>
-        <NavigationBar />
+        <NavigationBar setdata={props.setdata} />
       </div>
       <button className="menu-button" onClick={expendMenu}>
         <span>Notes Menu</span>

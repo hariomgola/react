@@ -1,5 +1,6 @@
 // importing files
 import {
+  reactNotes,
   introductionToReact,
   createReactApp,
   reactComponent,
@@ -10,29 +11,34 @@ import {
 const notesRender = () => {
   let _notesMapping = [
     {
+      id: "r0",
+      name: "React Notes",
+      fname: reactNotes,
+    },
+    {
       id: "r1",
       name: "Introduction To React",
-      notes: introductionToReact,
+      fname: introductionToReact,
     },
     {
       id: "r2",
       name: "Create React App",
-      notes: createReactApp,
+      fname: createReactApp,
     },
     {
       id: "r3",
       name: "React Component",
-      notes: reactComponent,
+      fname: reactComponent,
     },
     {
       id: "r4",
       name: "Introduction to JSX",
-      notes: JSX,
+      fname: JSX,
     },
     {
       id: "r5",
       name: "State in React",
-      notes: state,
+      fname: state,
     },
   ];
   return _notesMapping;

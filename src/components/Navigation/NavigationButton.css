@@ -18,6 +18,11 @@
   background: -webkit-linear-gradient(to right, #ff9068, #fd746c);
   background: linear-gradient(to right, #ff9068, #fd746c);
 }
+.navigation-button.active {
+  background: #fd746c;
+  background: -webkit-linear-gradient(to right, #ff9068, #fd746c);
+  background: linear-gradient(to right, #ff9068, #fd746c);
+}
 
 /* Css for tablet screen  */
 @media screen and (max-width: 700px) {

@@ -1,5 +1,8 @@
 import React from "react";
 
+const reactNotes = () => {
+  return <pre>React logo will come</pre>;
+};
 const introductionToReact = () => {
   let r1 = `
   # Introduction to react 
@@ -206,6 +209,7 @@ const state = () => {
 };
 
 export {
+  reactNotes,
   introductionToReact,
   createReactApp,
   reactComponent,
