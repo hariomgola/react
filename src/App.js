@@ -1,10 +1,10 @@
 // importing required libraries
 import React from "react";
-import { r1 } from "./data/notes";
+import Main from "./main/Main";
 
 // functionality start from here
 function App() {
-  return <>{r1()}</>;
+  return <Main />;
 }
 
 export default App;

@@ -1,0 +1,97 @@
+.navigation-overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+/* .menu-button {
+  font-size: 30px;
+  cursor: pointer;
+}
+.menu-button-close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+} */
+
+/* Animated button css */
+.menu-button {
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  background: #f7971e;
+  background: -webkit-linear-gradient(to right, #ffd200, #f7971e);
+  background: linear-gradient(to right, #ffd200, #f7971e);
+
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  width: 100%;
+  transition: all 0.5s;
+}
+.menu-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.menu-button span::after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.menu-button:hover span {
+  padding-right: 25px;
+}
+.menu-button:hover span::after {
+  opacity: 1;
+  right: 0;
+}
+.menu-button-close {
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  background: #f7971e;
+  background: -webkit-linear-gradient(to right, #ffd200, #f7971e);
+  background: linear-gradient(to right, #ffd200, #f7971e);
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  width: 100%;
+  transition: all 0.5s;
+}
+.menu-button-close span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.menu-button-close span::after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.menu-button-close:hover span {
+  padding-right: 25px;
+}
+.menu-button-close:hover span::after {
+  opacity: 1;
+  right: 0;
+}

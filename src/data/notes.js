@@ -117,6 +117,11 @@ const reactComponent = () => {
     - Release as a part of 16.7.0
     - Hook let's you use state and other React feacture without writting a class.
     - So As of not class component is no more required.
+
+  # Using custom data
+    - We can use custom data with the help of {}.
+    - Just pass tha varaible which is storing the data it automatically renders the data in UI.
+    - We can also pass custom data using props inside {}.
   `;
   return <pre>{r3}</pre>;
 };
@@ -152,4 +157,59 @@ const JSX = () => {
   return <pre>{r4}</pre>;
 };
 
-export { introductionToReact, createReactApp, reactComponent, JSX as r1 };
+const props = () => {
+  let r4 = `
+  # Props
+    - Props stand for property
+    - Props is the optional input that the component can accept.
+    - Props passed in the form of object in key value pair.
+    - With the help of props we can set own properties to custom components.
+    - It allows component to be dynamic.
+      
+     =const parent = () =>{                       const child = (props) =>{
+        <child name = "Hari"/>                         <h1> Welcome {props.name}</h1>
+      }                                           }
+
+    - We can pass n number of props children we want to pass 
+    - <child name="Hari" lastName = "Kumar">
+
+    - We can also pass the element from parent to child
+
+      const parent = () =>{                           const child = (props) =>{
+        <child name = "Hari" lastName="kumar">           <h1> Welcome {props.name}</h1>
+          <p> This is Child element</p>                  {props.children}
+        </child>                                      }
+      }       
+      
+    - Props.children is a special props it will render all element inside that element.
+    - Id no element is passed then props.children will do nothing.
+
+  # Concept of composition
+    - Dividing big component into small component with right functionality is termed as composition.
+    - Wrapper component's only works with nested html code.
+    - But it can't work if any component is nested inside that.
+
+  # wrapper function in React
+    - Learn how wrapper function changes we have use the same in card component
+    - Learn concept of props.children and how it assigned.
+    - Learn concept of changing the children class css from wrapper class.
+  `;
+  return <pre>{r4}</pre>;
+};
+
+const state = () => {
+  let r5 = `
+  # State
+    - 
+  `;
+  return <pre>{r5}</pre>;
+};
+
+export {
+  introductionToReact,
+  createReactApp,
+  reactComponent,
+  JSX,
+  props,
+  state,
+};
