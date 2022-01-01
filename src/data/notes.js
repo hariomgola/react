@@ -1,7 +1,8 @@
 import React from "react";
+import Logo from "../components/Logo/Logo";
 
 const reactNotes = () => {
-  return <pre>React logo will come</pre>;
+  return Logo();
 };
 const introductionToReact = () => {
   let r1 = `
