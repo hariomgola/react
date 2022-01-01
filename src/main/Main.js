@@ -15,7 +15,7 @@ const Main = () => {
         setTimeout(() => {
           setState("main");
         }, 3300);
-      }, 5000);
+      }, 4800);
     };
     console.log(state);
     stateManagment();
