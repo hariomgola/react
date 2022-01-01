@@ -19,9 +19,9 @@
   background: linear-gradient(to right, #ff9068, #fd746c);
 }
 .navigation-button.active {
-  background: #fd746c;
-  background: -webkit-linear-gradient(to right, #ff9068, #fd746c);
-  background: linear-gradient(to right, #ff9068, #fd746c);
+  background: #7f7fd5;
+  background: -webkit-linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+  background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
 }
 
 /* Css for tablet screen  */

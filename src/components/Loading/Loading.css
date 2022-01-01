@@ -4,9 +4,13 @@
   left: 0;
   width: 0;
   height: 20%;
-  background: #c6ffdd;
+  /* background: #c6ffdd;
   background: -webkit-linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
-  background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d); */
+  background: #7f7fd5;
+  background: -webkit-linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+  background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+
   transition: width 0.7s ease;
 }
 .loader .loadertile:nth-child(0) {
