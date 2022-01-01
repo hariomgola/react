@@ -5,7 +5,7 @@ import Notes from "../components/MainNotes/Notes";
 
 // functionality
 const MainContent = (props) => {
-  const [data, setdata] = useState("Introduction To React");
+  const [data, setdata] = useState("React Notes");
   return (
     <>
       <MainNavigation setdata={setdata} />

@@ -1,8 +1,16 @@
 .main-notes-section {
+  overflow: hidden;
   float: left;
   padding: 0px 2px;
   border: none;
   height: 90vh;
   width: 90%;
   border-left: none;
+}
+
+/* CSS for mobile device */
+@media screen and (max-width: 700px) {
+  .main-notes-section {
+    width: 100%;
+  }
 }

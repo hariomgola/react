@@ -4,7 +4,7 @@ import "./NotesHeading.css";
 
 // functionality start from here
 const NotesHeading = (props) => {
-  return <h1 className="heading">{props.heading}</h1>;
+  return <h2 className="heading">{props.heading}</h2>;
 };
 
 // exporting functionality
