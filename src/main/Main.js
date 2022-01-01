@@ -18,7 +18,7 @@ const Main = () => {
         }, 3300);
       }, 4800);
     };
-    console.log(state);
+    console.warn(`Initial state - ${state}`);
     stateManagment();
     setFlag(false);
   }
