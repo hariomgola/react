@@ -1,0 +1,44 @@
+.copyright {
+  position: fixed;
+  left: 0;
+  top: 95.2vh;
+  bottom: 0;
+  width: 99.8vw;
+  height: 4.8vh;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+}
+
+.copyright-line {
+  padding: 0.8vh;
+  display: inline-block;
+  vertical-align: middle;
+  color: orange;
+  letter-spacing: 2px;
+}
+
+.cursor {
+  display: inline-block;
+  vertical-align: middle;
+  width: 3px;
+  height: 20px;
+  background-color: orange;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: orange;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .copyright-line {
+    font-size: small;
+  }
+}

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Preloading from "../components/Preloading/Preloading";
 import Loading from "../components/Loading/Loading";
 import MainContent from "./MainContent";
+import Footer from "../components/Footer/Footer";
 
 // functionality start from here
 const Main = () => {
@@ -26,7 +27,12 @@ const Main = () => {
     <>
       {state === "preloading" && <Preloading />}
       {state === "loading" && <Loading />}
-      {state === "main" && <MainContent />}
+      {state === "main" && (
+        <>
+          <MainContent />
+          <Footer />
+        </>
+      )}
     </>
   );
 };
