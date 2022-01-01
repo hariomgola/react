@@ -5,7 +5,7 @@ h1 {
   font-weight: 600;
   font-size: 12px;
   text-transform: uppercase;
-  left: 42%;
+  left: 40vw;
   top: 58%;
   margin-left: -20px;
   text-align: center;
@@ -250,6 +250,6 @@ h1 {
 
 @media screen and (max-width: 700px) {
   h1 {
-    left: 35%;
+    left: 15vw;
   }
 }
