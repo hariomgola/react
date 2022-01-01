@@ -1,0 +1,14 @@
+.logo {
+  text-align: center;
+  background-color: #404040;
+  overflow: hidden;
+}
+.path {
+  animation: draw 5s infinite;
+}
+
+@keyframes draw {
+  50% {
+    stroke-dashoffset: 0;
+  }
+}
