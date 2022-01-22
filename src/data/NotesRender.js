@@ -6,7 +6,10 @@ import {
   reactComponent,
   JSX,
   state,
-} from "./Notes";
+  event,
+  router,
+  binding,
+} from "./notes";
 
 const notesRender = () => {
   let _notesMapping = [
@@ -39,6 +42,21 @@ const notesRender = () => {
       id: "r5",
       name: "State in React",
       fname: state,
+    },
+    {
+      id: "r6",
+      name: "React Events",
+      fname: event,
+    },
+    {
+      id: "r7",
+      name: "React Binding",
+      fname: binding,
+    },
+    {
+      id: "r10",
+      name: "React Router",
+      fname: router,
     },
   ];
   return _notesMapping;

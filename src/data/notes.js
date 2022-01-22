@@ -170,7 +170,7 @@ const props = () => {
     - With the help of props we can set own properties to custom components.
     - It allows component to be dynamic.
       
-     =const parent = () =>{                       const child = (props) =>{
+      const parent = () =>{                       const child = (props) =>{
         <child name = "Hari"/>                         <h1> Welcome {props.name}</h1>
       }                                           }
 
@@ -204,9 +204,170 @@ const props = () => {
 const state = () => {
   let r5 = `
   # State
-    - 
+    - State is mainly responsible for User Interaction and Handling Events
+    - Mainly responsible for updating the ui and working with state (useState)
+  
+  # State in React
+    - useState is the function in react library to use state in react.
+    - useState is called as react hook and introduced in @React16.0.1
+    - All hooks is called inside the react component function only.
+    - Hooks cannot be called inside the nested function.
+    - useState return a function with first value as its value itself, second value is used to update the value.
+      
+       - Example
+       _____________________________________________________________________________
+      | let [initialvalue,setvalue] = useState('defaultvalue')                      |
+      | defaultvalue  - set the default value when component is initializes         |
+      | initialvalue  - use to access the current value which state is holding      |
+      | setvalue      - use to change or set the value which can be accessed later  |
+      |                                                                             |
+      |* defaultvalue, initialvalue, setvalue is user define variable               |
+      |  you can use what ever you want to use                                      |
+      |_____________________________________________________________________________|
+
+  # Important point
+    - Without the use of state component will not refresh even the internal property or parameter changes.
+
+  # Using multiple state in component
+    - We can also use multiple state for handling mutiple value below is the example for same.
+             ___________________________________________
+            | let [initialname,setName] = useState('')  |
+            | let [initialDate,setDate] = useState('')  |
+            |___________________________________________|
+    - Intead if using above state withmutiple initialization we can pass it in the form of object
+             __________________________________________
+            | const [user,setUser] =  useState({       |  
+            |                           name:'',       |
+            |                           date:''        |
+            |                           desgnation:''  |
+            |                         })               |
+            |   setUser({                              |
+            |     ...user,                             |
+            |     name: 'Hari'                         |
+            |    })                                    |
+            |__________________________________________|
+    - This approach is very common by in this approach we need to update all properties. such as name,date.
+    - Here ...user take all other value and replace the updated one only.
+
+    - Above describe both things are correct. you can use anyone which you want to use.
+    - Remeber one important point when you update the state in second case and depend on private state use it like this.
+    - Instead of directly passing the object directly pass the function.
+        ___________________________________________________________________________
+       |  setUser((previousState)=>{                                               |
+       |    // previous state will get all the value which is currently assigned   |
+       |    return {                                                               |
+       |      ...previousState,                                                    |
+       |      name:'Hari'                                                          |
+       |    }                                                                      |
+       |  })                                                                       |
+       |___________________________________________________________________________|
+
+    - By using this approach we increase performance as well as the previous state value when we are updating a lot of state.
+    - This is also the safer way to update the thing on their latest snapshot.
+
+  # Note
+    - You can use any of that thing which ever you want to use. but knowing the concept is always a better approach.
+
   `;
   return <pre>{r5}</pre>;
+};
+
+const event = () => {
+  let r6 = `
+  # React Event
+    - Just like DOM, React can also perform certain opertaion on behalf of user interaction.
+    - React can also perform some action on click,change etc.
+  
+  # onClick
+    - onClick is an event handler in react which work on clicking of things.
+    - We have to provide event handling in following manner
+         ___________________________________________________________
+        |  printSomething(){                                        |      
+        |    console.log('Hi I am printing when button is clicked') |         
+        |  }                                                        |        
+        |  <button onClick={printSomething}>Click me</button>       |
+        |___________________________________________________________|   
+
+    - Remember we need to provide {printSomething} instead of {printSomething()}
+    - If we provide {printSomething()} then function is executed on compilation phase not the click phase.   
+    - By default react give the event parameter in function which we called. we only need to use it
+    - Just change the function to below event parameter.
+         ___________________________________________________________
+        |  printSomething(event){                                   |      
+        |    console.log('event - ',event)                          |         
+        |  }                                                        |        
+        |  <button onClick={printSomething}>Click me</button>       |
+        |___________________________________________________________|   
+
+    - We can also pass the custom message using the follwing code.
+         _______________________________________________________________________
+        |    printSomething(message){                                           |  
+        |      console.log(message)                                             |   
+        |    }                                                                  |  
+        |    <button onClick={() => printSomething("Click")}>Click me</button>  |
+        |_______________________________________________________________________|  
+            
+    - We can also pass the event as well as the custom message using below code
+         __________________________________________________________________________
+        |   printSomething(event,message){                                         |        
+        |     console.log(message,event)                                           |       
+        |   }                                                                      |     
+        |   <button onClick={(event) => shoot("click", event)}>Click me</button>   |
+        |__________________________________________________________________________|       
+
+  # Some Common Event
+    - onChange           -   When an HTML element is changes
+    - onClick            -   When an HTML element or button is clicked
+    - onMouseOver        -   When a mouse move to HTML element
+    - onMouseOut         -   When a mouse move out to HTML element
+    - onKeyDown          -   When a user push the keydown key in keyboard
+    - onLoad             -   when the browser has finished loading the page
+
+
+  `;
+  return <pre>{r6}</pre>;
+};
+
+const binding = () => {
+  let r7 = `
+  # Two way binding
+    - When we are changing or submitting the form on click event so we have to set the default value to that field.
+    - We can do it by specifying the value property and also sent that value to empty string or initial value after form submitted.
+         
+  # Child to parent binding
+    - In this binding we are communication to pass the data from parent to child.
+    - It simply can be done by creating a function in child component and passing that function to child and using in child component.
+    - And simply passing the parameter in parent component function from child got the data over there only. 
+
+      parent component                                                  child composnent
+       __________________________________                  _________________________________________
+      | functionName(data){              |                |  props.onsave('Hari')                   |
+      |    conosle.log(data)             |                |                                         |
+      |  }                               |                | // this will print data in p-component  |
+      | // pass this function as props   |                |                                         |
+      | <child onsave = {functionName}   |                |                                         |  
+      |__________________________________|                |_________________________________________|
+
+  # Lifting state up
+    - Lifting state up is the same kind of biniding from component to parent
+                             <App/>
+            ___________________|___________________
+           |                                       |
+        <child1/>                               <child2/>
+
+    - Since child1 and child2 doesn't have direct interaction with each other.
+    - So we need to move data from child2 to child1. firstly we need to pass the data from child2 to app and then to child1.
+    - This concept is termed as lifting the state up in react
+  `;
+  return <pre>{r7}</pre>;
+};
+
+const router = () => {
+  let r10 = `
+  # Library use for react Router
+    - npm i -D react-router-dom
+  `;
+  return <pre>{r10}</pre>;
 };
 
 export {
@@ -217,4 +378,7 @@ export {
   JSX,
   props,
   state,
+  event,
+  binding,
+  router,
 };
