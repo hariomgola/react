@@ -28,6 +28,8 @@ const introductionToReact = () => {
     - HTML  CSS  JavaScript
     - React allows you to create re-usable and reactive component consisting of HTML and JS
     - Define the desired target state and let figure out the actual Javascript DOM instruction.
+
+
   `;
   return <pre>{r1}</pre>;
 };
@@ -126,6 +128,8 @@ const reactComponent = () => {
     - We can use custom data with the help of {}.
     - Just pass tha varaible which is storing the data it automatically renders the data in UI.
     - We can also pass custom data using props inside {}.
+
+
   `;
   return <pre>{r3}</pre>;
 };
@@ -157,6 +161,8 @@ const JSX = () => {
     - for      -   htmlFor
     - camelCase property naming convention
     - onclick  -   onClick
+
+
   `;
   return <pre>{r4}</pre>;
 };
@@ -197,6 +203,8 @@ const props = () => {
     - Learn how wrapper function changes we have use the same in card component
     - Learn concept of props.children and how it assigned.
     - Learn concept of changing the children class css from wrapper class.
+
+
   `;
   return <pre>{r4}</pre>;
 };
@@ -358,16 +366,135 @@ const binding = () => {
     - Since child1 and child2 doesn't have direct interaction with each other.
     - So we need to move data from child2 to child1. firstly we need to pass the data from child2 to app and then to child1.
     - This concept is termed as lifting the state up in react
+
+
   `;
   return <pre>{r7}</pre>;
 };
 
-const router = () => {
+const conditionalStatement = () => {
+  let r8 = ``;
+  return <pre>{r8}</pre>;
+};
+
+const stylingComponent = () => {
+  let r9 = `
+  # Styling Component
+    - Static styling
+    - Dynamic styling
+    - Styling using style component package
+    - Styling using module.css files
+
+  # Defining .css file. (Static styling)
+    - This approach is really simple we have to use same name css file and import it in our react component
+    - Using     | import './reactComponent.css' | here i have chosen react component you can choose according to yourself 
+    - This approach is not scoped to particular element. its defining in global scope.
+
+  # Dynamic styling (Inline)
+    - style = {{color: !isValid ? 'red' : 'black'}}
+    - Using the above in css inline element we can assign the dynamic styling to any particular tag
+
+  # Dynamic styling using CSS classes
+    - We can simply add 2 classes in html element and also ass dynamic value in class name using ternary operator.
+    -  className = {'form-control $"{!isValid ? 'invalid'}'}  // remove " after $
+
+  # Styling component using styled component package
+    - Previously we are using regular css files with regular classes to style our component.
+    - Search for styled component in google or  'https://styled-components.com/'
+
+  # Style Using modules
+    - Modules can be used to scope the css to particular component using css modules.
+    - Modules style sheet need some configuration to use. but if the project is created using default create-react app already preconfigure.
+    - You can simply learn more about css modules 'https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/'
+    - Firstly we need to change css app.css to app.module.css to use the module and also we have to change the import functionality to below.
+    - import appStyle from './app.module.css' after that in element use className={appStyle.button} //.button is the property we defined in the css class.
+  
+  # Dynamic style Using Css modules
+    - All thing work as similar to the css modules.
+    - className = {'$'{style['form-control']} $'{!isValid && style.invalid}'} // remove ' after $ and replace initial with backticks.
+  
+  `;
+  return <pre>{r9}</pre>;
+};
+
+const debuggingReact = () => {
   let r10 = `
+  # Debugging React Application
+    - working with the breakpoint in browser developer tool. prefered chrome.
+    - Access the code on 
+        - localhost:3000
+  
+  # Using the react dev tool
+    - Dedicated tool for react development.
+    - you can simply search for react dev tool on chrome.google.com
+    - You find 2 new tabs component and profilers.
+
+  `;
+  return <pre>{r10}</pre>;
+};
+
+const fragmentPortalRefs = () => {
+  let r11 = `
+  # Fragment portals and refs
+    - In this slide 
+
+  # JSX Limitation
+    - JSX only return one element other element is nested inside this particular element.JSX can't have more than one root element.
+    - This is beacuse in javascript we can't return more than 1 thing at a time.
+    - So we need to enclouse that statement inside the div and then return it.
+    - In bigger application we have a tons of unnecessart <div>s which adds no semantic meaning or structure to the page.
+
+  # Creating a warraper component
+    - create a wrapper.js component
+           ____________________________________
+          |    const Wrapper = props => {      |
+          |       return props.children;       |  // props.children holds all the children elements
+          |    }                               |
+          |    export default Wrapper          |
+          |____________________________________|
+    - import this module in component and use instead of div. so no more useless div
+
+  # React Fragment
+    - Instead of creating the wrapper component ourself. it prebuild comes with react component termed a fragments.
+    -  <React.Fragment></React.Fragment>  // This will not create unnecessary div
+    - <></> // This is also react fragment but more conviniant version
+    - Fragment don't add any element in the rendered html
+
+  # React Portals (Imp)
+    - A model is basically and overlay on that page.
+    - We can use a portal for structuring proper models in reacts.
+    - import ReactDOM from 'react-dom' // import react dom to use portal
+    - use below code to render with particular html
+              <>
+                {React.createPortal(<JSX1 oncick={clickfunction} />, documenty.getelementbyId('backdrop-root') )}
+              </>
+       // here backdrop is a div created in publiv -> index.html page
+
+  # refs in React
+    - refs is defined as references in react
+    - refs are quite powerful. they allow us to access our dom element and work with them.
+    - refs return the value which allow us to work with them.
+             const nameInputRefs = useRef();  // here i am initializing the refs
+    - now we want to tell react to connect the refs to the html element.
+             <input ref={nameInputRefs}/>  // here i am connecting ref with the jsx element
+    - Ref value which is generated is always a reference and ih has always a current prop which holds the value of the prop it connected with.
+    - We can access the ref value by using refName.current.valu
+
+  `;
+  return <pre>{r11}</pre>;
+};
+
+const handlingSideEffectReducersContextAPI = () => {
+  let r12 = ``;
+  return <pre>{r12}</pre>;
+};
+
+const router = () => {
+  let r20 = `
   # Library use for react Router
     - npm i -D react-router-dom
   `;
-  return <pre>{r10}</pre>;
+  return <pre>{r20}</pre>;
 };
 
 export {
@@ -380,5 +507,10 @@ export {
   state,
   event,
   binding,
+  conditionalStatement,
+  stylingComponent,
+  debuggingReact,
+  fragmentPortalRefs,
+  handlingSideEffectReducersContextAPI,
   router,
 };

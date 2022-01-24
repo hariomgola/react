@@ -1,4 +1,4 @@
-# JavaScript notes
+# React notes
 This repository contains some good React notes.
 
 ## Accessible

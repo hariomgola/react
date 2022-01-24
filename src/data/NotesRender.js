@@ -7,8 +7,13 @@ import {
   JSX,
   state,
   event,
-  router,
   binding,
+  conditionalStatement,
+  stylingComponent,
+  debuggingReact,
+  fragmentPortalRefs,
+  handlingSideEffectReducersContextAPI,
+  router,
 } from "./notes";
 
 const notesRender = () => {
@@ -54,7 +59,32 @@ const notesRender = () => {
       fname: binding,
     },
     {
+      id: "r8",
+      name: "React Conditional Statement",
+      fname: conditionalStatement,
+    },
+    {
+      id: "r9",
+      name: "Styling Component",
+      fname: stylingComponent,
+    },
+    {
       id: "r10",
+      name: "Debugging React Application",
+      fname: debuggingReact,
+    },
+    {
+      id: "r11",
+      name: "Fregment, portals, refs",
+      fname: fragmentPortalRefs,
+    },
+    {
+      id: "r12",
+      name: "HandlingSideEffect, Using Reducers and context API",
+      fname: handlingSideEffectReducersContextAPI,
+    },
+    {
+      id: "r20",
       name: "React Router",
       fname: router,
     },
