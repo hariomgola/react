@@ -7,7 +7,7 @@ This repository contains some good React notes.
 | Project Schementics | Description                               |
 | ------------------- | ----------------------------------------- |
 | Data.js             | Data.js Contains All the notes            |
-| react-concept       | Contains all information on react-concept |
+| learn-react         | Contains all information on react-concept |
 
 ## Accessible
 
