@@ -19,6 +19,13 @@ const reactIntroduction = () => `
             |>  index.html
                    |>  index.js
                          |> app.js
+# index.html (public)
+ - This is the only file which is rendered in the browser.
+ - On this single html file we import the finish react application in this file.
+
+# JSX (JavaScript XML)
+ - JavaScript like XML
+ - Its is the form of writing the javascript like a xml file. 
 
 # {}
  - Curely braces has been used to import the dyanmic value into the jsx code
@@ -88,12 +95,33 @@ const hooksInReact = () => `
  - Rule for hooks
     - Hooks are only need to be inside the function
     - Hooks need to be called on the top level
-# useState
+
+# useState [Hook]
  - const [functionTitle, setFunctionTitle] = useState("App Helper Component")
  - useState is been used when we want to randor some value into the ui and component need to refresh.
  - functionTitle - the variable that contains the current value.
  - setFunctionTitle - to set the next value to render
+
+# useEffect 
+ - use effect hook allows you to perform side effects in your components.
+ - Its mostly used for fetch data, Directly updating the DOM and some timers
+ - use Effect takes two arguments and the second is optional
+ - useEffect(()=>{},[])
+      - [] - passing the empty array will once execute the useeffect function once.
+      - ['any paramerter'] - passing anything inside the aray the useeffect will execute when there is change is value.
+
+# useContext
+ - use context is used the manage the state to the nested child component.
+ - Scenerio one com1 -> com2 -> com3 -> com4 -> com5 -> com6
+ - I want to pass the data from com1 to com6 i can use the prop drilling
+ - With the help of useContext i can directly pass the data from com1 to com6
+
+# useRef
+ - useRef is used to store the value b/w render
+ - useState will be refreshed in case of a value change happen but this is not in the case of useRef
+ - useRef allow us to not refresh the whole component when value change happen
 `;
+
 module.exports = {
   "Introduction to React": reactIntroduction,
   "Props in React": propsInReact,
