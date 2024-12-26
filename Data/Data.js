@@ -22,6 +22,12 @@ const reactIntroduction = () => `
 
 # {}
  - Curely braces has been used to import the dyanmic value into the jsx code
+
+# Component describing Rule
+ - Function name should be uppercase
+ - Function name should be un PascalCase
+ - Function must return the single value that is been rendered.
+ - Function should return the JSX only.
 `;
 const propsInReact = () => `
 # props
@@ -72,9 +78,24 @@ const propsInReact = () => `
           </>
         );
       }
-`;
 
+# Key props
+ - Key props is very much usefull to identify the unique element in the list
+`;
+const hooksInReact = () => `
+# Hooks
+ - Hooks are some predefined functions in react
+ - Rule for hooks
+    - Hooks are only need to be inside the function
+    - Hooks need to be called on the top level
+# useState
+ - const [functionTitle, setFunctionTitle] = useState("App Helper Component")
+ - useState is been used when we want to randor some value into the ui and component need to refresh.
+ - functionTitle - the variable that contains the current value.
+ - setFunctionTitle - to set the next value to render
+`;
 module.exports = {
   "Introduction to React": reactIntroduction,
   "Props in React": propsInReact,
+  "Hooks in React": hooksInReact,
 };

@@ -1,10 +1,8 @@
-import './App.css';
+import AppHelper from "./Components/AppHelper";
 
 function App() {
-  return (
-    <div className="App">
-    </div>
-  );
+  console.clear();
+  return <AppHelper></AppHelper>;
 }
 
 export default App;
