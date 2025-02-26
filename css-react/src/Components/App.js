@@ -1,8 +1,9 @@
-import './App.css';
-
 function App() {
   return (
-    <>App is working</>
+    <>
+      Hello I am working
+      {/* <Sidebar /> */}
+    </>
   );
 }
 
