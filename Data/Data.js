@@ -90,6 +90,7 @@ const propsInReact = () => `
  - Key props is very much usefull to identify the unique element in the list
 `;
 const hooksInReact = () => `
+->> Project Director - Learn-hooks <<- 
 # Hooks
  - Hooks are some predefined functions in react
  - Rule for hooks
