@@ -3,6 +3,8 @@ import UseEffect from "./Components/useEffect";
 import UseContext from "./Components/useContext";
 import UseRef from "./Components/useRef";
 import UseReducer from "./Components/useReducer";
+import UseCallBack from "./Components/useCallback";
+import UseMemo from "./Components/useMemo";
 
 function App() {
   const data = `
@@ -18,7 +20,9 @@ function App() {
       {/* <UseEffect/> */}
       {/* <UseContext /> */}
       {/* <UseRef /> */}
-      <UseReducer />
+      {/* <UseReducer /> */}
+      {/* <UseCallBack /> */}
+      {/* <UseMemo /> */}
     </div>
   );
 }

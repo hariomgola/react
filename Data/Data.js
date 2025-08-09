@@ -121,6 +121,12 @@ const hooksInReact = () => `
  - useRef is used to store the value b/w render
  - useState will be refreshed in case of a value change happen but this is not in the case of useRef
  - useRef allow us to not refresh the whole component when value change happen
+
+# useReducer
+ - use reducer is also an statemanagement hook like use state.
+ - use reducer contains 2 value [count,dispatch] where count is the current data is dispatch is the function.
+ - use reducer conatins useReducer(reducerFunction, initialState) same as javascript reduce function.
+ - Where initial state is the initial value and reducerfunction is the function with custom logic to pass on.
 `;
 
 module.exports = {
