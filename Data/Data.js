@@ -127,6 +127,14 @@ const hooksInReact = () => `
  - use reducer contains 2 value [count,dispatch] where count is the current data is dispatch is the function.
  - use reducer conatins useReducer(reducerFunction, initialState) same as javascript reduce function.
  - Where initial state is the initial value and reducerfunction is the function with custom logic to pass on.
+
+# useCallback - return memoized function
+ - The useCallback and useMemo Hooks are similar. The main difference b/w is that useMemo returns a memorized value.
+ - Where as useCallback returns a memoized function
+
+# useMemo - return memoized value
+ - use memo is the performance version of useCallback since the function will only runs when we need it.
+ - Where as in case of useCallback the function will runs on each render
 `;
 
 module.exports = {
